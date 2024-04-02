@@ -1,2 +1,2 @@
-# concursados
-software de estudos gamificados
+# projeto concursados
+Este é o repositório do projeto "Concursados", uma iniciativa desenvolvida como parte do segundo período do curso de Engenharia de Software na faculdade. O objetivo principal deste projeto é criar um ambiente digital interativo e intuitivo, voltado para estudantes que se preparam para concursos públicos. A plataforma proposta oferecerá uma variedade de recursos projetados para otimizar e aprimorar o processo de estudo, abrangendo desde a organização da agenda de estudos até a análise detalhada do desempenho em diferentes áreas de conhecimento. add
