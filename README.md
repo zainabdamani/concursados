@@ -1,10 +1,10 @@
-## MealMagic Plataforma de Receitas (VanillaJS)
+## Concursados, plataforma de estudos gamificados  (VanillaJS)
 
 #### Este é um projeto universitário para aprendizagem de frontend com html, css e javascript.
 
 Este é um projeto que contém as seguintes competências principais:
 
-- Consumo de API e Estruturas de Dados
+- Estruturas de Dados
 - Manipulação de DOM e visualização de dados
 - Código Limpo e Melhores Práticas (Modularização, convenções de nomeação e muito mais)
 - UI/UX
@@ -17,12 +17,10 @@ Antes de começar, certifique-se de ter o Node.js instalado. Caso contrário, vo
 
 ### Integrantes
 
-Fernando Feques Sarandy<br/>
-Gustavo Kafica da Silva<br/>
-Mariana Gabrielle dos Santos Paula<br/>
-Marlenne Roberta Rodrigues dos Santos<br/>
-Luis Felipe Sitta<br/>
-Danniell Kruger <br/>
+Felipe de Almeida Falcão<br/>
+Fernanda Chini<br/>
+Nathan Grima<br/>
+Zainab Damani<br/>
 
 ### Começando
 
