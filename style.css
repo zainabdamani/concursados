@@ -71,7 +71,7 @@ nav {
 /* aqui acaba a navbar */
 
 main {
-  width: 75vw;
+  width: calc(75vw + 40px);
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -83,14 +83,34 @@ main {
 .filter {
   width: 100%;
   height: fit-content;
-  padding: 7px 15px;
+  padding: 7px 0px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #fff;
   border-radius: 5px;
 }
 
 label {
   font-weight: 500;
+}
+
+form {
+width: 100%;
+height: fit-content;
+padding: 7px 0px;
+}
+
+.questionBox {
+  resize: none;
+  width: calc(100% - 30px);
+  height: 120px;
+  display: block;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: medium;
+  background-color: white;
+  padding: 7px 15px;
 }
