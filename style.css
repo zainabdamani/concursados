@@ -244,3 +244,19 @@ padding: 7px 0px;
     padding: 0px;
     height: min-content;
   }
+
+.progress-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+
+.progress-container .progress{
+  width: 100%;
+  height: 5px;
+  background-color: #75E7A9;
+  padding: 2px 0px;
+  flex: 1;
+  margin: 0 1px
+}
+
