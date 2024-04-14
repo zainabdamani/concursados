@@ -222,7 +222,7 @@ padding: 7px 0px;
   }
 
   .buttonsContainers {
-    width: 100%;
+    width: calc(100% + 15px);
     height: auto;
     display: flex;
     align-items: center;
@@ -233,13 +233,14 @@ padding: 7px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0px 0px;
+    padding: 0px 0px 0px;
+    margin: 0 auto;
   }
   .buttonsContainers button {
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 30px;
+    font-size: 50px;
     color: #75E7A9;
     padding: 0px;
     height: min-content;
@@ -249,6 +250,7 @@ padding: 7px 0px;
     display: flex;
     width: 100%;
     height: auto;
+    margin-top: 8px;
   }
 
 .progress-container .progress{
