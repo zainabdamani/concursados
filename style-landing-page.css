@@ -1,0 +1,16 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.banner-carrossel {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-carrossel img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
