@@ -262,3 +262,8 @@ padding: 7px 0px;
   margin: 0 1px
 }
 
+.card i {
+  font-size: 24px;
+  margin-right: 10px; 
+}
+
