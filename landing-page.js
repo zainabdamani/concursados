@@ -15,3 +15,4 @@ function proximaImagem() {
     }
     document.getElementById('radio' + cont).checked = true;
 }
+
