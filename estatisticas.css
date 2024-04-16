@@ -1,0 +1,103 @@
+.body {
+    text-align: center;
+    background-color: #8800F4;
+}
+
+.header {
+    padding: 15px;
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0.20);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.tamanho {
+    width: 25px;
+}
+
+.background {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    margin: 10px 5px 0px 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.alinhar {
+    list-style-type: none;
+    padding: 0px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.alinhar-filtro-container {
+    list-style-type: none;
+    padding: 0px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alinhar-est {
+    color: whitesmoke;
+    justify-content: center;
+    transform: translateX(-35%);
+    margin: auto 0;
+}
+
+.alinhar-est p {
+    width: fit-content;
+}
+
+.alinhar-filtro {
+    display: flex;
+    /* width: 100%; */
+    padding-left: 0px;
+    flex-direction: row;
+    color: whitesmoke;
+    flex-wrap: nowrap;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+
+}
+
+.label-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    /* margin: 0 20px; */
+}
+
+.label-icon p {
+    margin: 0 10px;
+}
+
+.concursados {
+    color: whitesmoke;
+}
+
+.border-est {
+    padding: 2px;
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0.20);
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.date {
+    margin: 20px;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+canvas {
+    border: 3px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+}
