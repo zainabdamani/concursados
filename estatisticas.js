@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var data = {
         labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
         datasets: [{
-            label: 'Vendas',
+            label: 'Desempenho',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgba(255, 99, 132, 1)',
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var ctx = document.getElementById('radar-chart').getContext('2d');
   
     var data = {
-      labels: ['Vendas', 'Marketing', 'Desenvolvimento', 'Suporte', 'Administração'],
+      labels: ['Matematica', 'Português', 'Conhecimentos Gerais', 'Informática', 'Lingua Estrangeira'],
       datasets: [{
         label: 'Desempenho',
         data: [65, 59, 80, 81, 56],
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var data = {
       labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
       datasets: [{
-        label: 'Vendas',
+        label: 'Desempenho',
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgba(255, 99, 132, 1)',
