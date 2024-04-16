@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concursados</title>
+    <link rel="stylesheet" href="estatisticas.css">
+</head>
+
+
+<body class="body">
+    <header class="concursados">
+        <h1>Concursados</h1>
+    </header>
+    <aside class="header">
+        <nav>
+            <ul class="alinhar">
+                <li><a href="#"><img src="resources/home-regular-24.png" alt="home" class="tamanho"></a></li>
+                <li><a href="#"><img src="resources/joystick-regular-24-2.png" alt="Controle" class="tamanho"></a></li>
+                <li><a href="#"><img src="resources/line-chart-regular-24.png" alt="Grafico" class="tamanho"></a></li>
+                <li><a href="#"><img src="resources/error-circle-regular-24.png" alt="Atencao" class="tamanho"></a></li>
+                <li><a href="#"><img src="resources/shopping-bag-regular-24.png" alt="Shopping" class="tamanho"></a>
+                </li>
+                <li><a href="#"><img src="resources/moon-regular-24.png" alt="Lua" class="tamanho"></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="border-est">
+        <div class="alinhar-filtro-container">
+            <div class="alinhar-filtro">
+                <div class="label-icon">
+                    <p>
+                        Concurso selecionado: Todos
+                    </p>
+                    <img src="resources/filter-alt-regular-24.png" alt="filtro" class="tamanho">
+                </div>
+                <div class="label-icon">
+                    <p>Banca: Todas </p>
+                    <img src="resources/filter-alt-regular-24.png" alt="Filtro" class="tamanho">
+                </div>
+            </div>
+            <div class="alinhar-est">
+                <div class="label-icon">
+                    <img src="resources/scatter-chart-regular-24.png" alt="ESTATÍSTICAS" class="tamanho">
+
+                    <p> ESTATÍSTICAS PESSOAIS</p>
+                </div>
+            </div>
+            <div class="date">
+                <input type="date">
+                <input type="date">
+            </div>
+        </div>
+    </div>
+
+    <main class="alinhar">
+        <article>
+            <div class="background">
+                <h2>Matematica</h2>
+            </div>
+            <div class="background">
+                <h3><img src="resources/graduation-solid-24.png" alt="Graduação" class="tamanho"> Perguntas respondidas:
+                    120</h3>
+                <h3><img src="resources/check-regular-24.png" alt="check" class="tamanho"> Taxa de acerto: 47%</h3>
+                <h3><img src="resources/time-five-regular-24.png" alt="tempo" class="tamanho"> Tempo médio de resposta:
+                    1m27s</h3>
+            </div>
+        </article>
+        <article>
+            <div class="background">
+                <h2>Português</h2>
+            </div>
+            <div class="background">
+                <h3><img src="resources/graduation-solid-24.png" alt="Graduação" class="tamanho"> Perguntas respondidas:
+                    52</h3>
+                <h3><img src="resources/check-regular-24.png" alt="check" class="tamanho"> Taxa de acerto: 75%</h3>
+                <h3><img src="resources/time-five-regular-24.png" alt="tempo" class="tamanho"> Tempo médio de resposta:
+                    2m37s</h3>
+            </div>
+        </article>
+        <article>
+            <div class="background">
+                <h2>Conhecimentos Gerais</h2>
+            </div>
+            <div class="background">
+                <h3><img src="resources/graduation-solid-24.png" alt="Graduação" class="tamanho"> Perguntas respondidas:
+                    88</h3>
+                <h3><img src="resources/check-regular-24.png" alt="check" class="tamanho"> Taxa de acerto: 81%</h3>
+                <h3><img src="resources/time-five-regular-24.png" alt="tempo" class="tamanho"> Tempo médio de resposta:
+                    2m23s</h3>
+            </div>
+        </article>
+        <article>
+            <div class="background">
+                <h2>Informática</h2>
+            </div>
+            <div class="background">
+                <h3><img src="resources/graduation-solid-24.png" alt="Graduação" class="tamanho"> Perguntas respondidas:
+                    88</h3>
+                <h3><img src="resources/check-regular-24.png" alt="check" class="tamanho"> Taxa de acerto: 81%</h3>
+                <h3><img src="resources/time-five-regular-24.png" alt="tempo" class="tamanho"> Tempo médio de resposta:
+                    2m23s</h3>
+            </div>
+        </article>
+        <article>
+            <div class="background">
+                <h2>Lingua Estrangeira</h2>
+            </div>
+            <div class="background">
+                <h3><img src="resources/graduation-solid-24.png" alt="Graduação" class="tamanho"> Perguntas respondidas:
+                    0</h3>
+                <h3><img src="resources/check-regular-24.png" alt="check" class="tamanho"> Taxa de acerto: 0%</h3>
+                <h3><img src="resources/time-five-regular-24.png" alt="tempo" class="tamanho"> Tempo médio de resposta:
+                    0m00s</h3>
+            </div>
+        </article>
+
+    </main>
+
+    <div class="grafico-alinhamento">
+        <div class="tamanho-grafico">
+            <canvas id="line-chart"></canvas>
+        </div>
+        <div class="tamanho-grafico">
+            <canvas id="bar-chart"></canvas>
+            </div>
+        <div class="tamanho-grafico">
+            <canvas id="radar-chart"></canvas>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="estatisticas.js"></script>
+<link rel="stylesheet" href="estatisticas.js">
+
+</html>
