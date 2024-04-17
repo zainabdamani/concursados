@@ -15,7 +15,6 @@
     width: 25px;
 }
 
-
 .background {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
@@ -61,7 +60,6 @@
     /* justify-content: space-between; */
     align-items: center;
     margin: 0px 0px 0px 0px;
-
 }
 
 .label-icon {
@@ -76,21 +74,19 @@
 }
 
 .concursados {
-    color: whitesmoke;
+    color: #fff;
 }
 
-.border-est {
+.borda-estatistica {
     padding: 2px;
     margin: 30px;
     background-color: rgba(0, 0, 0, 0.20);
     text-align: center;
     border-radius: 10px;
-
 }
 
 .date {
     margin: 20px;
-
 }
 
 body {
