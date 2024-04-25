@@ -15,6 +15,7 @@ header {
  right: 0;
  top: 0;
  background: transparent;
+
 }
 
 .navigation {
@@ -29,6 +30,7 @@ header {
     margin: 30px auto;
     border-radius: 10px;
     backdrop-filter: blur(100px) saturate(100%);
+    
 }
 
 .listicon a {
@@ -260,5 +262,10 @@ padding: 7px 0px;
   padding: 2px 0px;
   flex: 1;
   margin: 0 1px
+}
+
+.card i {
+  font-size: 24px;
+  margin-right: 10px; 
 }
 

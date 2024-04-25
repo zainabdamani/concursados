@@ -1,0 +1,131 @@
+
+.cards {
+  padding: 10px 0;
+  margin-top: 0px
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 170px;
+  height: 170px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  color: #ffff;
+  text-align: center;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card i {
+  font-size: 30px;
+  margin-bottom: 10px; 
+  margin-top:5px;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg); 
+  }
+  100% {
+    transform: rotateY(360deg); 
+  }
+}
+
+.card:hover i {
+  animation: flip 1s ease-in-out; /* Aplica a animação de flip ao ícone quando o mouse passa por cima */
+}
+
+
+card:hover i{
+  animation: flip is ease-in-out;
+}
+
+.banner-carrossel{
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.section.banner-carrossel {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.banner-carrossel-conteudo {
+  width: 400%;
+  height: auto;
+  display: flex;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.banner-carrossel-conteudo input {
+  display: none;
+}
+
+.slide-box {
+  width: 25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  transition: 1s;
+}
+
+.slide-box img {
+  width: 100%;
+}
+
+.navegacao-manual, .navegacao-auto {
+  margin-top: 20px;
+  width: 0%;
+  margin-top: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.navegacao-manual .manual-btn, .navegacao-auto div {
+  border: 1px solid #ffff;
+  padding: 10px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navegacao-manual .manual-btn:not(:last-child),
+.navegacao-auto div:not(:last-child) {
+  margin-right: 10px;
+}
+
+.navegacao-manual .manual-btn:hover {
+  background-color: rgb(255, 255, 255);
+  
+}
+
+#radio1:checked ~ .navegacao-auto .auto-btn1, #radio2:checked ~ .navegacao-auto .auto-btn2, #radio3:checked ~ .navegacao-auto .auto-btn3 {
+  background-color: rgb(255, 255, 255);
+}
+
+#radio1:checked ~ .primeiro {
+  margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro {
+  margin-left: -50%;
+}
