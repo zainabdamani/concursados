@@ -1,9 +1,13 @@
+/* Estilos gerais */
 .body {
     display: block;
     text-align: center;
     background: linear-gradient(to bottom, #8B00F9, #420077);
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
+/* Estilos de navegação */
 .navigation {
     display: flex;
     flex-direction: row;
@@ -17,41 +21,26 @@
     backdrop-filter: blur(100px) saturate(100%);
 }
 
-.responsivo{
-    display: flex;
-    flex-direction: column;
-}
-
 .listicon a {
     display: flex;
     color:  #fff;
     font-size: 20px;
     height: 100%;
     padding: 15px 20px;
-    display: block;
     transform: rotate(0deg) scale(1);
     transition: all 0.3s ease-in-out;
-  }
-
-.header {
-    display: flex;
-    padding: 15px;
-    margin: 30px;
-    background-color: rgba(0, 0, 0, 0.20);
-    text-align: center;
-    border-radius: 10px;
 }
 
-.tamanho {
+/* Estilos de artigo */
+.responsivo {
     display: flex;
-    width: 25px;
+    flex-direction: column;
 }
 
 .background {
     display: flex;
-        flex-direction: column;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     margin: 10px 5px 0px 5px;
@@ -59,13 +48,13 @@
     font-size: 14px;
 }
 
+/* Estilos de alinhamento */
 .alinhar {
     display: flex;
+    justify-content: space-around;
     list-style-type: none;
     padding: 0px;
     margin: 5px;
-    display: flex;
-    justify-content: space-around;
 }
 
 .alinhar-filtro-container {
@@ -73,8 +62,16 @@
     list-style-type: none;
     padding: 0px;
     margin: 5px;
+}
+
+.alinhar-filtro {
     display: flex;
-    justify-content: space-between;
+    padding-left: 0px;
+    flex-direction: row;
+    color: whitesmoke;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0px;
 }
 
 .alinhar-est {
@@ -86,27 +83,15 @@
 }
 
 .alinhar-est p {
-    display: flex;
     width: fit-content;
 }
 
-.alinhar-filtro {
-    display: flex;
-    /* width: 100%; */
-    padding-left: 0px;
-    flex-direction: row;
-    color: whitesmoke;
-    flex-wrap: nowrap;
-    /* justify-content: space-between; */
-    align-items: center;
-    margin: 0px 0px 0px 0px;
-}
-
+/* Estilos específicos */
 .label-icon {
     display: flex;
     align-items: center;
     margin-right: 20px;
-    /* margin: 0 20px; */
+    color: #ffffff;
 }
 
 .label-icon p {
@@ -115,28 +100,29 @@
 
 .borda-estatistica {
     display: flex;
-    flex-direction: column;
-    padding: 2px;
-    margin: 30px;
-    background-color: rgba(0, 0, 0, 0.20);
-    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(95, 0, 169, 0.5);
+    width: 75vw;
     border-radius: 10px;
+    margin: 30px auto;
+    padding: 15px;
 }
 
 .date {
-    margin: 20px;
-}
-
-body {
     display: flex;
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
+.date input {
+    margin: 0 10px;
+}
+
+/* Estilos de gráfico */
 .grafico-alinhamento {
     display: flex;
     width: 100%;
-    display: flex;
     align-items: center;
     margin-top: 40px;
     justify-content: space-evenly;
