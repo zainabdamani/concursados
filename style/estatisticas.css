@@ -1,9 +1,40 @@
 .body {
+    display: block;
     text-align: center;
     background: linear-gradient(to bottom, #8B00F9, #420077);
 }
 
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(95, 0, 169, 0.5);
+    width: 75vw;
+    list-style: none;
+    align-items: center;
+    margin: 30px auto;
+    border-radius: 10px;
+    backdrop-filter: blur(100px) saturate(100%);
+}
+
+.responsivo{
+    display: flex;
+    flex-direction: column;
+}
+
+.listicon a {
+    display: flex;
+    color:  #fff;
+    font-size: 20px;
+    height: 100%;
+    padding: 15px 20px;
+    display: block;
+    transform: rotate(0deg) scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+
 .header {
+    display: flex;
     padding: 15px;
     margin: 30px;
     background-color: rgba(0, 0, 0, 0.20);
@@ -12,10 +43,15 @@
 }
 
 .tamanho {
+    display: flex;
     width: 25px;
 }
 
 .background {
+    display: flex;
+        flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     margin: 10px 5px 0px 5px;
@@ -24,6 +60,7 @@
 }
 
 .alinhar {
+    display: flex;
     list-style-type: none;
     padding: 0px;
     margin: 5px;
@@ -32,6 +69,7 @@
 }
 
 .alinhar-filtro-container {
+    display: flex;
     list-style-type: none;
     padding: 0px;
     margin: 5px;
@@ -40,6 +78,7 @@
 }
 
 .alinhar-est {
+    display: flex;
     color: whitesmoke;
     justify-content: center;
     transform: translateX(-35%);
@@ -47,6 +86,7 @@
 }
 
 .alinhar-est p {
+    display: flex;
     width: fit-content;
 }
 
@@ -73,11 +113,9 @@
     margin: 0 10px;
 }
 
-.concursados {
-    color: #fff;
-}
-
 .borda-estatistica {
+    display: flex;
+    flex-direction: column;
     padding: 2px;
     margin: 30px;
     background-color: rgba(0, 0, 0, 0.20);
@@ -90,11 +128,13 @@
 }
 
 body {
+    display: flex;
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
 .grafico-alinhamento {
+    display: flex;
     width: 100%;
     display: flex;
     align-items: center;
@@ -108,6 +148,7 @@ body {
 }
 
 canvas {
+    display: flex;
     border: 3px solid #ccc;
     background-color: rgba(255, 255, 255, 0.9);
     width: 100% !important;
