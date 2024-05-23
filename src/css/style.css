@@ -331,3 +331,15 @@ display: flex;
 .answer:disabled{
   cursor:not-allowed;
 }
+
+button{
+  cursor: pointer;
+}
+
+.correct{
+  border: 1px #75E7A9 ;
+}
+
+.selected{
+  background-color: black;
+}
