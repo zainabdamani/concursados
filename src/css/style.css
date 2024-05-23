@@ -327,3 +327,7 @@ display: flex;
   display: flex;
   font-size: 30pt;
 }
+
+.answer:disabled{
+  cursor:not-allowed;
+}

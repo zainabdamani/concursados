@@ -74,3 +74,7 @@ body {
 ::-ms-input-placeholder {
   color: white;
 }
+
+.form-control{
+  color: #fff;
+}

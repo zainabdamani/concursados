@@ -3,11 +3,14 @@ const nextQuestionButton = document.getElementById('next-question');
 const previousQuestion = document.getElementById('previous-question');
 const answerContainer = document.querySelector('.answer-container'); /* adcionar uma div com o nome answer-container e dentro dela colocar os botoes de resposta*/
 const questionText = document.querySelector('.question')/*adicionar uma div para a pergunta chamada question*/
-const startGameButton = document.querySelector('.button-start')
+const startGameButton = document.getElementById('button-start');
 
-let currentQuestion = 0; /*variavel para o controle da questao, inicia em 0 para sinalizar a primeira pergunta*/
+
+let currentQuestionIndex = 0; /*variavel para o controle da questao, inicia em 0 para sinalizar a primeira pergunta*/
+
 
 startGameButton.addEventListener("click", displayNextQuestion)
+nextQuestionButton.addEventListener("click",displayNextQuestion )
 
 function startGame(){
     displayNextQuestion()
@@ -17,8 +20,8 @@ function displayNextQuestion(){   /*funcao para remover os elementos filhos do c
     while(answerContainer.firstChild){
         answerContainer.removeChild(answerContainer.firstChild)
     }
-    questionText.textContent = questions[currentQuestion].question
-    questions[currentQuestion].answers.forEach(answers => { 
+    questionText.textContent = questions[currentQuestionIndex].question
+    questions[currentQuestionIndex].answers.forEach(answers => { 
         const newAnswer = document.createElemente("question-button")
         newAnswer.classList.add("answer", "button") /*criar o botao de resposta usando a classe button e com nome de answer*/
         newAnswer.textContent = answer.text
@@ -40,6 +43,18 @@ function selectAnswer(event){
     }else{
         document.answerButton.classList.add("incorrect")
     }
+
+    document.querySelectorAll(".answer").forEach(button ==> {
+        if(button.dataset.correct){
+            button.classList.add("correct")
+        } else{
+            button.classList.add("incorrect")
+        }
+
+        button.disabled = "true"
+        
+    })
+    currentQuestionIndex++
 }
 
 
