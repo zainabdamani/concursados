@@ -1,3 +1,10 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
 
 
 body {
@@ -9,9 +16,14 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: linear-gradient(to bottom, #8B00F9, #420077);
+  justify-content: center;
 }
 .container-quiz{
-width: 100vh;
+width: 100%;
+justify-content: center;
+display: flex;
+align-items: center;
+
 
 }
 header {
@@ -74,12 +86,13 @@ nav {
 }
 
 main {
-  width: calc(75vw + 40px);
+  width: 100vh;
   height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .filter {
@@ -105,7 +118,7 @@ form {
 
 .question-container {
   resize: none;
-  width: calc(100% - 30px);
+  width: 100%;
   height: 120px;
   display: block;
   border-radius: 5px;
@@ -115,6 +128,9 @@ form {
   font-size: medium;
   background-color: white;
   padding: 7px 15px;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .answer-container {
@@ -127,11 +143,10 @@ form {
   font-weight: 500;
   font-style: normal;
   font-size: medium;
-  padding: 5px;
   align-items: center;
   flex-direction: column;
   list-style: none;
-  row-gap: 7px;
+ 
 }
 
 .answer {
@@ -141,6 +156,7 @@ form {
   min-height: 50px;
   border: 2px solid white;
   margin-bottom: 10px; /* Adicionado para espaçamento entre as opções de resposta */
+  justify-content: left;
 }
 
 .answerbox:nth-child(2) {
@@ -158,11 +174,27 @@ form {
   margin-top: 20px; /* Ajustado o espaçamento do topo */
 }
 
+.controls-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+}
+
+.hide2{
+  display: none;
+}
+
+.hide{
+  display: none;
 }
 
 .buttonsContainers button {
@@ -222,3 +254,29 @@ form {
   margin-top: 10px;
 }
 
+.button{
+  cursor: pointer;
+}
+
+.start-quiz {
+  height: 20px;
+  background-color: #fff;
+  color:#420077
+}
+
+.container-button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+.start-quiz{
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  height: 70px;
+  width: 300px;
+  font-size: 16px;
+  border:none;
+}

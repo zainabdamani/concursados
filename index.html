@@ -45,7 +45,7 @@
         </nav>
     </header>
     <main>
-        <div class="filter">
+        <div class="filter hide">
             <div>
                 <label for="dropdownConcursos">
                     Concurso selecionado:
@@ -70,7 +70,8 @@
                 </select>
             </div>
         </div>
-        <div class="container-quiz">
+        <div class="container-quiz hide">
+          
             <div class="question-container">
                 <span class="concurso-selecionado">(BANCO DO BRASIL 2018 - CESGRANIO)</span >
                 <span class="question">Pergunta</span >   
@@ -82,21 +83,32 @@
               <button class="answer button">Resposta</button>
               <button class="answer button">Resposta</button>
             </div>
+            
         </div >
+       <div class="container-button">
+        <button class="start-quiz button">Comecar Quiz!
+        </button></div>
         
-        <div class="container-progress-bar">
-            <div class="progress-bar">
-                <div class="progress"></div>
+
+        <div class="container-progress-bar hide">
+            <div class="progress-bar hide">
+                <div class="progress hide"></div>
             </div>
-            <div class="time-left">Tempo Restante: <span id="time"></span></div>
+            <div class="time-left hide">Tempo Restante: <span id="time"></span></div>
         </div>
+        <div class="controls-container">
+          <div class="wrapper">
+          <button class="previous-question button hide">Anterior</button>
+          <button class="next-question button hide">Proxima</button>
+        </div>
+      </div>
         <script src="script.js"></script>
-        <div class="buttonsContainers">
+        <div class="controls-container">
             <div class="wrapper">
-                <button>
+                <button class="hide2">
                     <i class='bx bxs-left-arrow'></i>
                 </button>
-                <button>
+                <button class="hide2" >
                     <i class='bx bxs-right-arrow'></i>
                 </button>
             </div>
