@@ -1,3 +1,5 @@
+
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -8,7 +10,10 @@ body {
   min-height: 100vh;
   background: linear-gradient(to bottom, #8B00F9, #420077);
 }
+.container-quiz{
+width: 100vh;
 
+}
 header {
   position: sticky;
   left: 0;
@@ -98,7 +103,7 @@ form {
   padding: 7px 0px;
 }
 
-.questionBox {
+.question-container {
   resize: none;
   width: calc(100% - 30px);
   height: 120px;
@@ -112,7 +117,7 @@ form {
   padding: 7px 15px;
 }
 
-.answers {
+.answer-container {
   width: 100%;
   height: fit-content;
   display: flex; 
@@ -129,7 +134,7 @@ form {
   row-gap: 7px;
 }
 
-.answerbox {
+.answer {
   background-color: white;
   width: 100%;
   border-radius: 5px;
@@ -191,7 +196,7 @@ form {
   margin-right: 10px; 
 }
 
-.container {
+.container-progress-bar {
   display: flex;
   flex-direction: column;
   text-align: center;
