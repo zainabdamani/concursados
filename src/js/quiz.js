@@ -1,8 +1,31 @@
+const $startGameButton = document.querySelector('.start-quiz')
+const $filter = document.querySelector('.filter')
+const $quizContainer = document.querySelector('.container-quiz')
+const $containerProgressBar = document.querySelector('.container-progress-bar')
+const $progressBar = document.querySelector('.progress-bar')
+const $progress = document.querySelector('.progress')
+const $timerLeft = document.querySelector ('.timer-left')
+const $previousQuestionButton = document.querySelector('.previous-question')
+const $nextQuestionButton = document.querySelector('.next-question')
 
 
 
 
 
+
+$startGameButton.addEventListener("click", startGame)
+
+function startGame(){
+    $startGameButton.classList.add("hide")
+    $filter.classList.remove("hide")
+    $quizContainer.classList.remove("hide")
+    $progressBar.classList.remove("hide")
+    $progress.classList.remove("hide")
+    $timerLeft.classList.remove('hide')
+    $nextQuestionButton.classList.remove('hide')
+    $previousQuestionButton.classList.remove('hide')
+
+}
 
 
 
