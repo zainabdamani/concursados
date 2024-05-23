@@ -3,7 +3,7 @@ const nextQuestionButton = document.getElementById('next-question');
 const previousQuestion = document.getElementById('previous-question');
 const answerContainer = document.querySelector('.answer-container'); /* adcionar uma div com o nome answer-container e dentro dela colocar os botoes de resposta*/
 const questionText = document.querySelector('.question')/*adicionar uma div para a pergunta chamada question*/
-const startGameButton = document.querySelector(".bx bxs-left-arrow")
+const startGameButton = document.querySelector('.button-start')
 
 let currentQuestion = 0; /*variavel para o controle da questao, inicia em 0 para sinalizar a primeira pergunta*/
 
@@ -17,7 +17,7 @@ function displayNextQuestion(){   /*funcao para remover os elementos filhos do c
     while(answerContainer.firstChild){
         answerContainer.removeChild(answerContainer.firstChild)
     }
-    questionText.textContent = question[currentQuestion].question
+    questionText.textContent = questions[currentQuestion].question
     questions[currentQuestion].answers.forEach(answers => { 
         const newAnswer = document.createElemente("question-button")
         newAnswer.classList.add("answer", "button") /*criar o botao de resposta usando a classe button e com nome de answer*/
