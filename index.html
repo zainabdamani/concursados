@@ -1,130 +1,132 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Concursados</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <nav class="py-4">
-        <ul class="navigation">
-          <li class="listicon">
-            <a href="landing-page.html"><i class='bx bx-home'></i></a>
-          </li>
-          <li class="listicon">
-            <a href="index.html"><i class='bx bx-joystick'></i></a>
-          </li>
-          <li class="listicon">
-            <a href="estatisticas.html"><i class='bx bx-line-chart'></i></a>
-          </li>
-          <li class="listicon">
-            <a href="tema.html"><i class='bx bx-info-circle'></i></a>
-          </li>
-          <li class="listicon">
-            <a href="#"><i class='bx bx-shopping-bag'></i></a>
-          </li>
-          <a class="nav-actions">
-            <button class="btn">
-              <i class='bx bx-sun'></i>
-            </button>
-          </a>
-        </ul>
-      </nav>
+        <nav class="py-4">
+            <ul class="navigation">
+                <li class="listicon">
+                    <a href="landing-page.html"><i class='bx bx-home'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="index.html"><i class='bx bx-joystick'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="estatisticas.html"><i class='bx bx-line-chart'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="tema.html"><i class='bx bx-info-circle'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="#"><i class='bx bx-shopping-bag'></i></a>
+                </li>
+                <a class="nav-actions">
+                    <button class="btn">
+                        <i class='bx bx-sun'></i>
+                    </button>
+                </a>
+            </ul>
+        </nav>
     </header>
-    <!-- aqui acaba a navbar -->
     <main>
-      <div class="filter">
-        <div>
-          <label for="dropdownConcursos">
-            Concurso selecionado:
-          </label>
-          <select name="dropdownConcursos" id="dropdownConcursos">
-            <option value="BANCO DO BRASIL">Banco do Brasil</option>
-            <option value="CAIXA ECONÔMICA FEDERAL">Caixa Econômica Federal</option>
-            <option value="POLÍCIA RODOVIÁRIA FEDERAL">Polícia Federal Rodoviária</option>
-            <option value="PF (ÁREA ADMINISTRATIVA)">PF (Área Administrativa)</option>
-          </select>
+        <div class="filter">
+            <div>
+                <label for="dropdownConcursos">
+                    Concurso selecionado:
+                </label>
+                <select name="dropdownConcursos" id="dropdownConcursos">
+                    <option value="BANCO DO BRASIL">Banco do Brasil</option>
+                    <option value="CAIXA ECONÔMICA FEDERAL">Caixa Econômica Federal</option>
+                    <option value="POLÍCIA RODOVIÁRIA FEDERAL">Polícia Federal Rodoviária</option>
+                    <option value="PF (ÁREA ADMINISTRATIVA)">PF (Área Administrativa)</option>
+                </select>
+            </div>
+            <div>
+                <label for="dropdownBanca">
+                    Banca:
+                </label>
+                <select name="dropdownBanca" id="dropdownBanca">
+                    <option value="Fundação CesgranRIO">Fundação CesgranRIO</option>
+                    <option value="Fundação Getúlio Vargas FGV">Fundação Getúlio Vargas FGV</option>
+                    <option value="CEBRASP">CEBRASP</option>
+                    <option value="Fundação Carlos Chagas FCC">Fundação Carlos Chagas FCC</option>
+                    <option value="Fundação VUNESP">Fundação VUNESP</option>
+                </select>
+            </div>
         </div>
-        <div>
-          <label for="dropdownBanca">
-            Banca:
-          </label>
-          <select name="dropdownBanca" id="dropdownBanca">
-            <option value="Fundação CesgranRIO">Fundação CesgranRIO</option>
-            <option value="Fundação Getúlio Vargas FGV">Fundação Getúlio Vargas FGV</option>
-            <option value="CEBRASP">CEBRASP</option>
-            <option value="Fundação Carlos Chagas FCC">Fundação Carlos Chagas FCC</option>
-            <option value="Fundação VUNESP">Fundação VUNESP</option>
-          </select>
+        <form>
+            <div class="questionBox">
+                <h4>
+                    (BANCO DO BRASIL 2018 - CESGRANIO)
+                </h4>
+                <p>
+                    Em um investimento financeiro, um capital de R$ 10.000,00 foi aplicado a juros compostos durante 2
+                    anos. No primeiro ano, a taxa de juros foi de 5% ao ano e, no segundo ano, foi de 8% ao ano. Qual o
+                    montante final dessa aplicação ao final dos 2 anos?
+                </p>
+            </div>
+        </form>
+        <ul class="answers">
+            <li class="answerbox">
+                <h5>
+                    R$ 11.600,00
+                </h5>
+            </li>
+            <li class="answerbox">
+                <h5>
+                    R$ 11.700,00
+                </h5>
+            </li>
+            <li class="answerbox">
+                <h5>
+                    R$ 11.800,00
+                </h5>
+            </li>
+            <li class="answerbox">
+                <h5>
+                    R$ 11.900,00
+                </h5>
+            </li>
+            <li class="answerbox">
+                <h5>
+                    R$ 12.000,00
+                </h5>
+            </li>
+        </ul>
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="time-left">Tempo Restante: <span id="time"></span></div>
         </div>
-      </div>
-      <form>
-        <div class="questionBox">
-          <h4>
-            (BANCO DO BRASIL 2018 - CESGRANIO)
-          </h4>
-          <p>
-            Em um investimento financeiro, um capital de R$ 10.000,00 foi aplicado a juros compostos durante 2 anos. No primeiro ano, a taxa de juros foi de 5% ao ano e, no segundo ano, foi de 8% ao ano. Qual o montante final dessa aplicação ao final dos 2 anos?
-          </p>
-          </div>
-      </form>
-      <!-- aqui acaba a pergunta -->
-      <div class="progress-container">
-        <div class="progress">
+        <script src="script.js"></script>
+        <div class="buttonsContainers">
+            <div class="wrapper">
+                <button>
+                    <i class='bx bxs-left-arrow'></i>
+                </button>
+                <button>
+                    <i class='bx bxs-right-arrow'></i>
+                </button>
+            </div>
         </div>
-        <div class="progress">
-        </div>
-        <div class="progress">
-        </div>
-      </div>
-      <ul class="answers">
-        <li class="answerbox">
-          <h5>
-            R$ 11.600,00
-          </h5>
-        </li>
-        <li class="answerbox">
-          <h5>
-            R$ 11.700,00
-          </h5>
-        </li>
-        <li class="answerbox">
-          <h5>
-            R$ 11.800,00
-          </h5>
-        </li>
-        <li class="answerbox">
-          <h5>
-            R$ 11.900,00
-          </h5>
-        </li>
-        <li class="answerbox">
-          <h5>
-            R$ 12.000,00
-          </h5>
-        </li>
-      </ul>
-      <!-- aqui acaba as respostas -->
-      <div class="buttonsContainers">
-        <div class="wrapper">
-        <button>
-          <i class='bx bxs-left-arrow'></i>
-        </button>
-        <button>
-          <i class='bx bxs-right-arrow'></i>
-        </button>
-        </div>
-      </div>
-     
     </main>
-        <script type="module" src="src/js/main.js"></script>
-  </body>
+    <script src="src/js/script.js"></script>
+</body>
+
 </html>
