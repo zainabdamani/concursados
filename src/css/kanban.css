@@ -1,0 +1,105 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(139, 0, 249), rgb(66, 0, 119));
+
+  }
+  
+  header {
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: transparent;
+  }
+  
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(95, 0, 169);
+    width: 75vw;
+    /* height: 7vh; */
+    list-style: none;
+    align-items: center;
+    margin: 30px auto;
+    border-radius: 10px;
+    backdrop-filter: blur(100px) saturate(100%);
+  }
+  
+  .listicon a {
+    color: #fff;
+    font-size: 20px;
+    height: 100%;
+    padding: 15px 20px;
+    display: block;
+    transform: rotate(0deg) scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .listicon a:hover {
+    /* background-color: rgba(66, 0, 119, 0.3); */
+    transform: rotate(360deg) scale(1.3);
+  }
+  
+  .listicon button {
+    background-color: none;
+    border: none;
+  }
+  
+  .btn {
+    background: none;
+    cursor: pointer;
+    color: #fff;
+    border-style: none;
+    font-size: 20px;
+  }
+  
+  nav {
+    margin: 25px 0px;
+  }
+  
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .navigation {
+      -webkit-backdrop-filter: blur(2em);
+      backdrop-filter: blur(2em);
+    }
+  }
+
+.container{
+    font-family: "Trebuchet MS", sans-serif;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.column{
+    flex-basis: 13%;
+    background: #fff;
+    border: 1.5px solid #692689;
+    min-height: 70vh;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+.column h1{
+    text-align: center;
+    font-size: 22px;
+}
+.item{
+    background: #fafafa;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #692689;
+    border: 1px solid #e5e5e5;
+    box-shadow: 1px 1px 6px rgba(105, 38, 137, 0.7);
+} 
+.invisible{
+    display: none;
+}

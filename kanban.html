@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda do Concurseiro</title>
+    <link rel="stylesheet" href="./src/css/kanban.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <nav class="py-4">
+            <ul class="navigation">
+                <li class="listicon">
+                    <a href="landing-page.html"><i class='bx bx-home'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="index.html"><i class='bx bx-joystick'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="estatisticas.html"><i class='bx bx-line-chart'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="tema.html"><i class='bx bx-info-circle'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="./kanban.html"><i class='bx bx-shopping-bag'></i></a>
+                </li>
+                <a class="nav-actions">
+                    <button class="btn">
+                        <i class='bx bx-sun'></i>
+                    </button>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="container">
+        <div class="column">
+            <h1>All Tasks</h1>
+            <div class="item" draggable="true">Wash Clothes</div>
+            <div class="item" draggable="true">Meeting at 9AM</div>
+            <div class="item" draggable="true">Fix workshop</div>
+            <div class="item" draggable="true">Visit the zoo</div>
+        </div>
+        <div class="column">
+            <h1>In progress</h1>
+        </div>
+        <div class="column">
+            <h1>Paused</h1>
+        </div>
+        <div class="column">
+            <h1>Under Review</h1>
+        </div>
+        <div class="column">
+            <h1>Completed</h1>
+        </div>
+    </div>
+    </main>
+    <script src="./src/js/kanban.js"></script>
+</body>
+</html>
