@@ -1,3 +1,25 @@
+:root {
+  --fundo: linear-gradient(to bottom, #8B00F9, #420077);
+  --elementos: rgba(95, 0, 169, 0.5);
+  --icone-texto: #fff;
+  --icone-texto2: rgba(255, 255, 255, 0.8);
+  --question-box: #fff;
+  --border: #fff;
+  --progress-bar: #4caf50;
+  --text: black;
+}
+
+.dark-mode {
+  --fundo: #1a1a1a;
+  --elementos: #252525;
+  --icone-texto: #fff;
+  --icone-texto2: rgba(255, 255, 255, 0.8);
+  --question-box: #252525;
+  --border: #8F00FF;
+  --progress-bar: #8F00FF;
+  --text: rgb(222, 222, 222);
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -6,7 +28,8 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #8B00F9, #420077);
+  background: var(--fundo);
+  color: var(--text);
 }
 
 header {
@@ -15,14 +38,14 @@ header {
   right: 0;
   top: 0;
   background: transparent;
-  z-index: 1000; /* Adicionado z-index para garantir que a navbar fique acima de outros elementos */
+  z-index: 1000;
 }
 
 .navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: rgba(95, 0, 169, 0.5);
+  background-color: var(--elementos);
   width: 75vw;
   list-style: none;
   align-items: center;
@@ -32,12 +55,12 @@ header {
 }
 
 .listicon a {
-  color:  #fff;
+  color: var(--icone-texto);
   font-size: 20px;
   height: 100%;
   padding: 15px 20px;
   display: block;
-  transition: transform 0.3s ease-in-out; /* Ajuste para melhorar a animação de hover */
+  transition: transform 0.3s ease-in-out;
 }
 
 .listicon a:hover {
@@ -45,14 +68,15 @@ header {
 }
 
 .listicon button {
-  background-color: none;
+  background: none;
   border: none;
+  color: var(--icone-texto);
 }
 
 .btn {
   background: none;
   cursor: pointer;
-  color: #fff;
+  color: var(--icone-texto);
   border-style: none;
   font-size: 20px;
 }
@@ -63,8 +87,8 @@ nav {
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .navigation {
-      -webkit-backdrop-filter: blur(2em);
-      backdrop-filter: blur(2em);
+    -webkit-backdrop-filter: blur(2em);
+    backdrop-filter: blur(2em);
   }
 }
 
@@ -84,7 +108,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #fff;
+  background-color: var(--question-box);
   border-radius: 5px;
 }
 
@@ -108,14 +132,15 @@ form {
   font-weight: 500;
   font-style: normal;
   font-size: medium;
-  background-color: white;
+  background-color: var(--question-box);
   padding: 7px 15px;
+  color: var(--text);
 }
 
 .answers {
   width: 100%;
   height: fit-content;
-  display: flex; 
+  display: flex;
   justify-content: center;
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
@@ -127,20 +152,22 @@ form {
   flex-direction: column;
   list-style: none;
   row-gap: 7px;
+  color: var(--text);
 }
 
 .answerbox {
-  background-color: white;
+  background-color: var(--question-box);
   width: 100%;
   border-radius: 5px;
   min-height: 50px;
-  border: 2px solid white;
-  margin-bottom: 10px; /* Adicionado para espaçamento entre as opções de resposta */
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+  color: var(--text);
 }
 
-.answerbox:nth-child(2) {
+/*.answerbox:nth-child(2) {
   border: 2px solid lime;
-}
+}*/
 
 .answerbox h5 {
   margin-left: 20px;
@@ -150,7 +177,7 @@ form {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Ajustado o espaçamento do topo */
+  margin-top: 20px;
 }
 
 .wrapper {
@@ -180,7 +207,7 @@ form {
 .progress-container .progress {
   width: 100%;
   height: 5px;
-  background-color: #75E7A9;
+  background-color: var(--progress-bar);
   padding: 2px 0px;
   flex: 1;
   margin: 0 1px;
@@ -188,7 +215,7 @@ form {
 
 .card i {
   font-size: 24px;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .container {
@@ -207,7 +234,7 @@ form {
 
 .progress {
   height: 100%;
-  background-color: #4caf50;
+  background-color: var(--progress-bar);
   width: 100%;
   transition: width 1s linear;
 }
@@ -216,4 +243,3 @@ form {
   color: white;
   margin-top: 10px;
 }
-
