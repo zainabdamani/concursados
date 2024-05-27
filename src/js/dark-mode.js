@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const darkModeButton = document.getElementById("dark-mode-btn");
     const currentMode = localStorage.getItem("dark-mode");
 
-    if (currentMode === "enabled") {
-        document.documentElement.classList.add("dark-mode");
+    if (currentMode === "disabled") {
+        document.documentElement.classList.remove("dark-mode");
     }
     darkModeButton.addEventListener("click", function() {
         document.documentElement.classList.toggle("dark-mode");
