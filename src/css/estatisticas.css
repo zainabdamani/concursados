@@ -27,6 +27,7 @@
     padding: 15px 20px;
     display: block;
     transition: transform 0.3s ease-in-out;
+    text-decoration: none;
   }
 
   .listicon button {
@@ -85,16 +86,30 @@
 
 }
 
-.background {
-    display: flex;
+.background-titulo{
+  display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     background-color:var(--question-box);
     border-radius: 20px;
     margin: 10px 5px 0 5px;
     padding: 5px;
     font-size: 14px;
     color: var(--text);
+    align-items: center;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color:var(--question-box);
+    border-radius: 20px;
+    margin: 10px 5px 0 5px;
+    padding: 5px;
+    font-size: 14px;
+    color: var(--text);
+    align-items: flex-start;
 }
 
 .alinhar {
@@ -122,6 +137,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 20px;
+    
     
 }
 
