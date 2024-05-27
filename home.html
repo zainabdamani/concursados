@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="dark-mode">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,9 +8,7 @@
   <title>Concursados</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="src/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="src/css/home.css">
@@ -19,25 +17,38 @@
 <body class="d-flex w-100 h-100 text-center align-self-center mr-3">
 
   <div class="cover-container d-flex align-self-center mr-3 p-3 mx-auto flex-column">
-
     <h1 class="font-weight-bold" style="color: white;">Olá Concurseiro! 👋 <br> Qual o Seu Nome?</h1>
-
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="NOME" aria-label="NOME" aria-describedby="basic-addon1">
-      <class></class>
+      <input type="text" class="form-control" id="nome" placeholder="NOME" aria-label="NOME" aria-describedby="basic-addon1">
     </div>
-
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="SOBRENOME" aria-label="SOBRENOME"
-        aria-describedby="basic-addon1">
+      <input type="text" class="form-control" id="sobrenome" placeholder="SOBRENOME" aria-label="SOBRENOME" aria-describedby="basic-addon1">
     </div>
-
-    <a href="index.html" class="btn btn-lg btn-light fw-bold border-white bg-white">Começar!</a>
-
+    <button id="comecarBtn" class="btn btn-lg btn-light fw-bold border-white bg-white">Começar!</button>
   </div>
 
-  <script src="src/js/bootstrap.bundle.min.js.map"></script>
+  <script src="/JS/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const comecarBtn = document.getElementById("comecarBtn");
 
+      comecarBtn.addEventListener("click", function() {
+        const nome = document.getElementById("nome").value;
+        const sobrenome = document.getElementById("sobrenome").value;
+
+        if (nome && sobrenome) {
+          // Armazenar nome e sobrenome no localStorage
+          localStorage.setItem("nome", nome);
+          localStorage.setItem("sobrenome", sobrenome);
+
+          // Redirecionar para landing-page.html
+          window.location.href = "landing-page.html";
+        } else {
+          alert("Por favor, preencha todos os campos.");
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

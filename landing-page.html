@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="dark-mode">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -7,14 +8,16 @@
   <title>Concursados</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="src/css/style.css">
-  <link rel="stylesheet" href="src/css/style-landing-page.css">
-  <script src="src/js/landing-page.js" defer></script>
-  <script src="./src/js/dark-mode.js"></script>
+  <link rel="stylesheet" href="src\css\style.css">
+  <link rel="stylesheet" href="src\css\style-landing-page.css">
+  <script src="/JS/landing-page.js" defer></script>
 </head>
+
 <body>
   <header>
     <nav class="py-4">
@@ -35,14 +38,13 @@
           <a href="#"><i class='bx bx-shopping-bag'></i></a>
         </li>
         <a class="nav-actions">
-          <button id="dark-mode-btn" class="btn">
+          <button class="btn">
             <i class='bx bx-sun'></i>
           </button>
         </a>
       </ul>
     </nav>
   </header>
-    
 
   <section class="banner-carrossel">
     <div class="banner-carrossel-conteudo">
@@ -51,15 +53,15 @@
       <input type="radio" name="btn-radio" id="radio3">
 
       <div class="slide-box primeiro">
-        <img class="img-desktop" src="src/assets/img/Banner 1.jpg" alt="banner1">
+        <img class="img-desktop" src="src\assets\img\Banner 1.jpg" alt="banner1">
       </div>
 
       <div class="slide-box">
-        <img class="img-desktop" src="src/assets/img/Banner 2.jpg" alt="banner2">
+        <img class="img-desktop" src="src\assets\img\Banner 2.jpg" alt="banner2">
       </div>
 
       <div class="slide-box">
-        <img class="img-desktop" src="src/assets/img/banner1.png" alt="banner3">
+        <img class="img-desktop" src="src\assets\img\Banner 1.jpg" alt="banner3">
       </div>
 
       <div>
@@ -68,7 +70,7 @@
           <div class="auto-btn2"></div>
           <div class="auto-btn3"></div>
         </div>
-      
+
         <div class="navegacao-manual">
           <label for="radio1" class="manual-btn"></label>
           <label for="radio2" class="manual-btn"></label>
@@ -78,35 +80,55 @@
     </div>
   </section>
 
+  <section class="welcome-box">
+    <div class="welcome">
+      <h1>Olá, <span id="user-nome"></span> <span id="user-sobrenome"></span>!</h1>
+    </div>
+  </section>
 
   <section class="cards">
     <div class="container">
       <div class="card">
-        <i class='bx bxs-pencil' style='color:#ffffff' ></i>
+        <i class='bx bxs-pencil' style='color:#ffffff'></i>
         Perguntas Especificas
       </div>
       <div class="card">
-        <i class='bx bx-check-square' style='color:#ffffff' ></i>
+        <i class='bx bx-check-square' style='color:#ffffff'></i>
         Resposta Instantânea
       </div>
       <div class="card">
-        <i class='bx bx-user' style='color:#ffffff' ></i>
-        Estatísticas Personalizadas</div>
+        <i class='bx bx-user' style='color:#ffffff'></i>
+        Estatísticas Personalizadas
+      </div>
       <div class="card">
-        <i class='bx bx-timer' style='color:#ffffff' ></i>
-        Temporizador</div>
+        <i class='bx bx-timer' style='color:#ffffff'></i>
+        Temporizador
+      </div>
       <div class="card">
         <i class='bx bxs-time'></i>
-        Tempo Médio Por Questão</div>
+        Tempo Médio Por Questão
+      </div>
       <div class="card">
-        <i class='bx bxs-toggle-right' style='color:#ffffff' ></i>
-        Modo Dark</div>
+        <i class='bx bxs-toggle-right' style='color:#ffffff'></i>
+        Modo Dark
+      </div>
     </div>
   </section>
-  
 
-</body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const nome = localStorage.getItem("nome");
+      const sobrenome = localStorage.getItem("sobrenome");
 
+      if (nome && sobrenome) {
+        document.getElementById("user-nome").textContent = nome;
+        document.getElementById("user-sobrenome").textContent = sobrenome;
+      } else {
+        document.getElementById("user-nome").textContent = "Convidado";
+        document.getElementById("user-sobrenome").textContent = "";
+      }
+    });
+  </script>
 </body>
 
 </html>

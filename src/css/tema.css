@@ -1,26 +1,3 @@
-:root {
-  --fundo: linear-gradient(to bottom, #8B00F9, #420077);
-  --elementos: rgba(95, 0, 169, 0.5);
-  --icone-texto: #fff;
-  --icone-texto2: rgba(255, 255, 255, 0.8);
-  --question-box: #fff;
-  --border: #fff;
-  --progress-bar: #4caf50;
-  --text: black;
-}
-
-.dark-mode {
-  --fundo: #1a1a1a;
-  --elementos: #252525;
-  --icone-texto: #fff;
-  --icone-texto2: rgba(255, 255, 255, 0.8);
-  --question-box: #252525;
-  --border: #8F00FF;
-  --progress-bar: #8F00FF;
-  --text: rgb(222, 222, 222);
-}
-
-
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -29,7 +6,7 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: var(--fundo);
+  background: linear-gradient(to bottom, #8B00F9, #420077);
 }
 
 header {
@@ -44,9 +21,8 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: var(--elementos);
+  background-color: rgba(95, 0, 169, 0.5);
   width: 75vw;
-  /* height: 7vh; */
   list-style: none;
   align-items: center;
   margin: 30px auto;
@@ -65,7 +41,6 @@ header {
 }
 
 .listicon a:hover {
-  /* background-color: rgba(66, 0, 119, 0.3); */
   transform: rotate(360deg) scale(1.3);
 }
 
@@ -88,8 +63,8 @@ nav {
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .navigation {
-    -webkit-backdrop-filter: blur(2em);
-    backdrop-filter: blur(2em);
+      -webkit-backdrop-filter: blur(2em);
+      backdrop-filter: blur(2em);
   }
 }
 
@@ -97,7 +72,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
 .container {
@@ -109,6 +83,7 @@ main {
 .lista {
   width: 100%;
   height: fit-content;
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   border-radius: 5px;
@@ -125,18 +100,17 @@ main {
 }
 
 .bloco {
-  Background-color:var(--question-box);
-  border: 1px solid var(--border);
+  background-color: white;
+  border: 2px solid white;
   border-radius: 20px;
   padding: 5px;
   margin-bottom: 5px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   position: relative;
   align-items: center;
-  color: var(--text)
 }
 
 .item {
@@ -144,6 +118,11 @@ main {
   min-height: 20%;
   width: 15%;
   display: flex;
+}
+
+#bola{
+  align-items: center;
+  justify-content: space-between;
 }
 
 p {
@@ -155,7 +134,7 @@ p {
 }
 
 .frase {
-  color: var(--text);
+  color: #555;
   margin-left: 13px;
 }
 
@@ -182,7 +161,6 @@ p {
 .imagem {
   margin-left: auto;
   margin-right: 15px;
-
 }
 
 .imagem img {
