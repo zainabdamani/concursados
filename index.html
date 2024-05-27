@@ -1,15 +1,19 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Concursados</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="./src/css/style.css">
     <script src="./src/js/questionary.js" async></script>
   </head>
@@ -39,34 +43,98 @@
           </a>
         </ul>
       </nav>
+=======
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="./src/js/quiz.js" async></script>
+</head>
+
+<body>
+    <header>
+        <nav class="py-4">
+            <ul class="navigation">
+                <li class="listicon">
+                    <a href="landing-page.html"><i class='bx bx-home'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="index.html"><i class='bx bx-joystick'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="estatisticas.html"><i class='bx bx-line-chart'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="tema.html"><i class='bx bx-info-circle'></i></a>
+                </li>
+                <li class="listicon">
+                    <a href="#"><i class='bx bx-shopping-bag'></i></a>
+                </li>
+                <a class="nav-actions">
+                    <button class="btn">
+                        <i class='bx bx-sun'></i>
+                    </button>
+                </a>
+            </ul>
+        </nav>
+>>>>>>> dba80bf652a8d258e56317382ce0b908e8beae1e
     </header>
-    <!-- aqui acaba a navbar -->
     <main>
-      <div class="filter">
-        <div>
-          <label for="dropdownConcursos">
-            Concurso selecionado:
-          </label>
-          <select name="dropdownConcursos" id="dropdownConcursos">
-            <option value="BANCO DO BRASIL">Banco do Brasil</option>
-            <option value="CAIXA ECONÔMICA FEDERAL">Caixa Econômica Federal</option>
-            <option value="POLÍCIA RODOVIÁRIA FEDERAL">Polícia Federal Rodoviária</option>
-            <option value="PF (ÁREA ADMINISTRATIVA)">PF (Área Administrativa)</option>
-          </select>
+        <div class="filter hide">
+            <div>
+                <label for="dropdownConcursos">
+                    Concurso selecionado:
+                </label>
+                <select name="dropdownConcursos" id="dropdownConcursos">
+                    <option value="BANCO DO BRASIL">Banco do Brasil</option>
+                    <option value="CAIXA ECONÔMICA FEDERAL">Caixa Econômica Federal</option>
+                    <option value="POLÍCIA RODOVIÁRIA FEDERAL">Polícia Federal Rodoviária</option>
+                    <option value="PF (ÁREA ADMINISTRATIVA)">PF (Área Administrativa)</option>
+                </select>
+            </div>
+            <div>
+                <label for="dropdownBanca">
+                    Banca:
+                </label>
+                <select name="dropdownBanca" id="dropdownBanca">
+                    <option value="Fundação CesgranRIO">Fundação CesgranRIO</option>
+                    <option value="Fundação Getúlio Vargas FGV">Fundação Getúlio Vargas FGV</option>
+                    <option value="CEBRASP">CEBRASP</option>
+                    <option value="Fundação Carlos Chagas FCC">Fundação Carlos Chagas FCC</option>
+                    <option value="Fundação VUNESP">Fundação VUNESP</option>
+                </select>
+            </div>
         </div>
-        <div>
-          <label for="dropdownBanca">
-            Banca:
-          </label>
-          <select name="dropdownBanca" id="dropdownBanca">
-            <option value="Fundação CesgranRIO">Fundação CesgranRIO</option>
-            <option value="Fundação Getúlio Vargas FGV">Fundação Getúlio Vargas FGV</option>
-            <option value="CEBRASP">CEBRASP</option>
-            <option value="Fundação Carlos Chagas FCC">Fundação Carlos Chagas FCC</option>
-            <option value="Fundação VUNESP">Fundação VUNESP</option>
-          </select>
+        <div class="container-quiz hide">
+          
+            <div class="question-container">
+                <span class="concurso-selecionado">(BANCO DO BRASIL 2018 - CESGRANIO)</span >
+                <span class="question">Pergunta</span >   
+            </div>
+            <div class="answer-container">
+              <button class="answer button">Resposta</button>
+              <button class="answer button">Resposta</button>
+              <button class="answer button">Resposta</button>
+              <button class="answer button">Resposta</button>
+              <button class="answer button">Resposta</button>
+            </div>
+            
+        </div >
+       <div class="container-button">
+        <button class="start-quiz button">Comecar Quiz!
+        </button></div>
+        
+
+        <div class="container-progress-bar hide">
+            <div class="progress-bar hide">
+                <div class="progress hide"></div>
+            </div>
+            <div class="time-left hide">Tempo Restante: <span id="time"></span></div>
+        </div>
+        <div class="controls-container">
+          <div class="wrapper">
+          <button class="previous-question button hide">Anterior</button>
+          <button class="next-question button hide">Proxima</button>
         </div>
       </div>
+<<<<<<< HEAD
       <form>
         <div class="questionBox">
           <h4>(BANCO DO BRASIL 2018 - CESGRANRIO)</h4>
@@ -100,3 +168,21 @@
         <script  src="./src/js/questionary.js"></script>
   </body>
 </html>
+=======
+        <script src="script.js"></script>
+        <div class="controls-container">
+            <div class="wrapper">
+                <button class="hide2">
+                    <i class='bx bxs-left-arrow'></i>
+                </button>
+                <button class="hide2" >
+                    <i class='bx bxs-right-arrow'></i>
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>
+>>>>>>> dba80bf652a8d258e56317382ce0b908e8beae1e

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concursados</title>
-    <link rel="stylesheet" href="/style/estatisticas.css">
+    <link rel="stylesheet" href="/src/css/estatisticas.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 
-
 <body class="body">
+
     <aside>
         <nav>
             <ul class="navigation">
@@ -36,37 +36,49 @@
         </nav>
     </aside>
 
-    <div class="borda-estatistica">
-        <div class="alinhar-filtro-container">
-            <div class="alinhar-filtro">
-                <div class="label-icon">
-                    <p>
-                        Concurso selecionado: Todos
-                    </p>
-                    <box-icon name='filter-alt' color='#ffffff'></box-icon>
-                </div>
-                <div class="label-icon">
-                    <p>Banca: Todas </p>
-                    <box-icon name='filter-alt' color='#ffffff'></box-icon>
-                </div>
-            </div>
-            <div class="alinhar-est">
-                <div class="label-icon">
-                    <box-icon name='scatter-chart' color='#ffffff'></box-icon>
-                    <p> ESTATÍSTICAS PESSOAIS</p>
-                </div>
-            </div>
-            <div class="date">
-                <input type="date">
-                <input type="date">
-            </div>
-        </div>
-    </div>
+    <header class="titulo">
+        <h1>Estatísticas Pessoais</h1>
+    </header>
+
+    <aside>
+        <nav>
+            <ul class="navigation">
+                <li class="listicon">
+                    <div class="alinhar-filtro">
+                        <div class="label-icon">
+                            <p>Concurso selecionado: Todos</p>
+                            <box-icon name='filter-alt' color='#ffffff'></box-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="alinhar-filtro">
+                        <div class="label-icon">
+                            <p>Banca: Todas</p>
+                            <box-icon name='filter-alt' color='#ffffff'></box-icon>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="data">
+                        <p>Data inicial:</p>
+                            <input type="date">
+                    </div>
+                </li>
+                <li>
+                    <div class="data">
+                        <p>Data final: </p>
+                        <input type="date">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
     <main class="alinhar">
         <article class="responsivo">
             <div class="background">
-                <h2>Matematica</h2>
+                <h2>Matemática</h2>
             </div>
             <div class="background">
                 <div class="label-icon">
@@ -75,11 +87,11 @@
                 </div>
                 <div class="label-icon">
                     <box-icon name='check'></box-icon>
-                    <h3> Taxa de acerto: 47%</h3>
+                    <h3>Taxa de acerto: 47%</h3>
                 </div>
                 <div class="label-icon">
                     <box-icon name='time'></box-icon>
-                    <h3> Tempo médio de resposta: 1m27s</h3>
+                    <h3>Tempo médio de resposta: 1m27s</h3>
                 </div>
             </div>
         </article>
@@ -94,12 +106,13 @@
                 </div>
                 <div class="label-icon">
                     <box-icon name='check'></box-icon>
-                    <h3> Taxa de acerto: 47%</h3>
+                    <h3>Taxa de acerto: 47%</h3>
                 </div>
                 <div class="label-icon">
                     <box-icon name='time'></box-icon>
-                    <h3> Tempo médio de resposta: 1m27s</h3>
+                    <h3>Tempo médio de resposta: 1m27s</h3>
                 </div>
+            </div>
         </article>
         <article>
             <div class="background">
@@ -112,12 +125,13 @@
                 </div>
                 <div class="label-icon">
                     <box-icon name='check'></box-icon>
-                    <h3> Taxa de acerto: 47%</h3>
+                    <h3>Taxa de acerto: 47%</h3>
                 </div>
                 <div class="label-icon">
                     <box-icon name='time'></box-icon>
-                    <h3> Tempo médio de resposta: 1m27s</h3>
+                    <h3>Tempo médio de resposta: 1m27s</h3>
                 </div>
+            </div>
         </article>
         <article>
             <div class="background">
@@ -130,16 +144,17 @@
                 </div>
                 <div class="label-icon">
                     <box-icon name='check'></box-icon>
-                    <h3> Taxa de acerto: 47%</h3>
+                    <h3>Taxa de acerto: 47%</h3>
                 </div>
                 <div class="label-icon">
                     <box-icon name='time'></box-icon>
-                    <h3> Tempo médio de resposta: 1m27s</h3>
+                    <h3>Tempo médio de resposta: 1m27s</h3>
                 </div>
+            </div>
         </article>
         <article>
             <div class="background">
-                <h2>Lingua Estrangeira</h2>
+                <h2>Língua Estrangeira</h2>
             </div>
             <div class="background">
                 <div class="label-icon">
@@ -148,14 +163,14 @@
                 </div>
                 <div class="label-icon">
                     <box-icon name='check'></box-icon>
-                    <h3> Taxa de acerto: 47%</h3>
+                    <h3>Taxa de acerto: 47%</h3>
                 </div>
                 <div class="label-icon">
                     <box-icon name='time'></box-icon>
-                    <h3> Tempo médio de resposta: 1m27s</h3>
+                    <h3>Tempo médio de resposta: 1m27s</h3>
                 </div>
+            </div>
         </article>
-
     </main>
 
     <footer class="grafico-alinhamento">
@@ -170,10 +185,8 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/js/estatisticas.js"></script>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="/js/estatisticas.js"></script>
-<link rel="stylesheet" href="/js/estatisticas.js">
 
 </html>
