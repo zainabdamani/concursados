@@ -31,8 +31,7 @@ function saveTask(columnName, text){
              text
         ]
     })
-    return ;
-    }
+    } else {
     let updatedKanbanData = kanbanData.map((kanban)=>{
     
         if (kanban.column===columnName){
@@ -40,10 +39,35 @@ function saveTask(columnName, text){
         } 
         return kanban
     })
-    kanbanData=updatedKanbanData;
+    kanbanData=updatedKanbanData;}
     localStorage.setItem("kanban", JSON.stringify(kanbanData))
 }
 
+function updateTask(columnName, task) {
+        const kanbanExists = kanbanData.some((kanban)=>{
+            return kanban.column===columnName
+        })
+        if (kanbanExists) {
+            let updatedKanbanData = kanbanData.map((kanban)=>{
+
+                const kanbanItem = kanban.cards.indexOf(task);
+                let extractedItem ;
+                if (kanbanItem===-1){
+                    return kanban;
+                } 
+                    extractedItem = kanban.cards.pop(kanbanItem) 
+                
+                    console.log(kanban.column)
+                if (kanban.column===columnName){
+                    kanban.cards.push(extractedItem)
+                } 
+
+                return kanban
+            
+            } ) 
+            console.log(updatedKanbanData)
+        }
+    }
 
 function drags(){
 const items = document.querySelectorAll('.item')
@@ -56,22 +80,23 @@ items.forEach(item => {
 });
 
 function dragStart() {
-    console.log('drag começou');
     dragItem = this;
     setTimeout(() => this.className = 'invisible', 0)
 }
 function dragEnd() {
-    console.log('drag acabo');
       this.className = 'item'
       dragItem = null;
+    //   console.log(this)
 }
 
 function dragDrop() {
-    console.log('drag dropped');
     if (dragItem===null){
         return;
     }
+    console.log(this)
+    updateTask(this.id, dragItem.textContent)
     this.append(dragItem);
+    console.log(dragItem.textContent)
 }
 
 columns.forEach(column => {
@@ -82,14 +107,12 @@ columns.forEach(column => {
 });
 
 function dragEnter() {
-    console.log('drag entered');
 }
 function dragLeave() {
-    console.log('drag left');
 }
+
 function dragOver(e) {
     e.preventDefault()
-    console.log('drag over');
   }
 }
 
