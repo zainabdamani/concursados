@@ -89,7 +89,7 @@
 .background-titulo{
   display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     background-color:var(--question-box);
     border-radius: 20px;
     margin: 10px 5px 0 5px;
