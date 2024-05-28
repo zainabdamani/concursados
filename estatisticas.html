@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="dark-mode">
 
 <head>
     <meta charset="UTF-8">
@@ -7,34 +7,48 @@
     <title>Concursados</title>
     <link rel="stylesheet" href="/src/css/estatisticas.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body class="body">
-
-    <aside>
-        <nav>
+    <header>
+        <nav class="py-4">
             <ul class="navigation">
                 <li class="listicon">
-                    <a href="landing-page.html"><box-icon name='home' color='#ffffff'></box-icon></a>
+                    <a href="landing-page.html"><i class='bx bx-home'></i></a>
                 </li>
-                <li>
-                    <a href="index.html"><box-icon name='joystick' color='#ffffff'></box-icon></a>
+                <li class="listicon">
+                    <a href="index.html"><i class='bx bx-joystick'></i></a>
                 </li>
-                <li>
-                    <a href="estatisticas.html"><box-icon name='line-chart' color='#ffffff'></box-icon></a>
+                <li class="listicon">
+                    <a href="estatisticas.html"><i class='bx bx-line-chart'></i></a>
                 </li>
-                <li>
-                    <a href="tema.html"><box-icon name='error-circle' color='#ffffff'></box-icon></a>
+                <li class="listicon">
+                    <a href="tema.html"><i class='bx bx-info-circle'></i></a>
                 </li>
+<<<<<<< HEAD
                 <li>
                     <a href="./kanban.html"><box-icon name='shopping-bag' color='#ffffff'></box-icon></a>
                 </li>
                 <li>
                     <a href="#"><box-icon name='moon' color='#ffffff'></box-icon></a>
+=======
+                <li class="listicon">
+                    <a href="#"><i class='bx bx-shopping-bag'></i></a>
+>>>>>>> 96bfaa6f09eb951ce71d46eec6c6baff5b41cb10
                 </li>
+                <a class="nav-actions">
+                    <button class="btn">
+                        <i id="dark-mode-btn" class='bx bx-sun'></i>
+                    </button>
+                </a>
             </ul>
         </nav>
-    </aside>
+    </header>
 
     <header class="titulo">
         <h1>Estatísticas Pessoais</h1>
@@ -77,7 +91,7 @@
 
     <main class="alinhar">
         <article class="responsivo">
-            <div class="background">
+            <div class="background-titulo">
                 <h2>Matemática</h2>
             </div>
             <div class="background">
@@ -96,7 +110,7 @@
             </div>
         </article>
         <article>
-            <div class="background">
+            <div class="background-titulo">
                 <h2>Português</h2>
             </div>
             <div class="background">
@@ -115,7 +129,7 @@
             </div>
         </article>
         <article>
-            <div class="background">
+            <div class="background-titulo">
                 <h2>Conhecimentos Gerais</h2>
             </div>
             <div class="background">
@@ -134,7 +148,7 @@
             </div>
         </article>
         <article>
-            <div class="background">
+            <div class="background-titulo">
                 <h2>Informática</h2>
             </div>
             <div class="background">
@@ -147,26 +161,26 @@
                     <h3>Taxa de acerto: 47%</h3>
                 </div>
                 <div class="label-icon">
-                    <box-icon name='time'></box-icon>
+                    <box-icon name='time' ></box-icon>
                     <h3>Tempo médio de resposta: 1m27s</h3>
                 </div>
             </div>
         </article>
         <article>
-            <div class="background">
+            <div class="background-titulo">
                 <h2>Língua Estrangeira</h2>
             </div>
             <div class="background">
                 <div class="label-icon">
-                    <box-icon name='graduation' type='solid'></box-icon>
+                    <box-icon class="icon" name='graduation' type='solid'></box-icon>
                     <h3>Perguntas respondidas: 120</h3>
                 </div>
                 <div class="label-icon">
-                    <box-icon name='check'></box-icon>
+                    <box-icon class="icon" name='check'></box-icon>
                     <h3>Taxa de acerto: 47%</h3>
                 </div>
                 <div class="label-icon">
-                    <box-icon name='time'></box-icon>
+                    <box-icon class="icon" name='time'></box-icon>
                     <h3>Tempo médio de resposta: 1m27s</h3>
                 </div>
             </div>
@@ -187,6 +201,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="src/js/estatisticas.js"></script>
+    <script src="./src/js/dark-mode.js"></script>
 </body>
 
 </html>

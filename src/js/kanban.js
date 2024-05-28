@@ -20,6 +20,16 @@ addBtns.forEach((btn)=>{
     })
 })
 
+class LocalStorage {
+    static save(key, data){
+        localStorage.setItem(key, JSON.stringify(data))
+    }
+
+    static get(key) {
+        return JSON.parse(localStorage.getItem(key))
+    }
+}
+
 function saveTask(columnName, text){
     const kanbanExists = kanbanData.some((kanban)=>{
         return kanban.column===columnName
@@ -32,42 +42,50 @@ function saveTask(columnName, text){
         ]
     })
     } else {
-    let updatedKanbanData = kanbanData.map((kanban)=>{
-    
-        if (kanban.column===columnName){
-            kanban.cards.push(text)
-        } 
-        return kanban
-    })
-    kanbanData=updatedKanbanData;}
-    localStorage.setItem("kanban", JSON.stringify(kanbanData))
+        let updatedKanbanData = kanbanData.map((kanban)=>{
+        
+            if (kanban.column===columnName){
+                kanban.cards.push(text)
+            } 
+            return kanban
+        })
+
+        kanbanData=updatedKanbanData;
+    }
+
+    LocalStorage.save("kanban", kanbanData)
+
+    // localStorage.setItem("kanban", JSON.stringify(kanbanData))
 }
 
 function updateTask(columnName, task) {
-        const kanbanExists = kanbanData.some((kanban)=>{
-            return kanban.column===columnName
-        })
-        if (kanbanExists) {
-            let updatedKanbanData = kanbanData.map((kanban)=>{
+    const kanbanExists = kanbanData.some((kanban)=>{
+        return kanban.column===columnName
+    })
 
-                const kanbanItem = kanban.cards.indexOf(task);
-                let extractedItem ;
-                if (kanbanItem===-1){
-                    return kanban;
-                } 
-                    extractedItem = kanban.cards.pop(kanbanItem) 
-                
-                    console.log(kanban.column)
-                if (kanban.column===columnName){
-                    kanban.cards.push(extractedItem)
-                } 
+    if (kanbanExists) {
+        let extractedItem;
 
-                return kanban
+        let updatedKanbanData = kanbanData.map((kanban)=>{
+            const kanbanItem = kanban.cards.indexOf(task);
             
-            } ) 
-            console.log(updatedKanbanData)
-        }
+            if (kanbanItem !== -1) {
+                if (!extractedItem) {
+                    extractedItem = kanban.cards.pop(kanbanItem);
+                }
+            } 
+
+            if (kanban.column === columnName) {
+                extractedItem && kanban.cards.push(extractedItem);
+            }
+            
+            return kanban
+        })
+        
+        kanbanData = updatedKanbanData
+        LocalStorage.save("kanban", kanbanData)
     }
+}
 
 function drags(){
 const items = document.querySelectorAll('.item')
@@ -84,8 +102,12 @@ function dragStart() {
     setTimeout(() => this.className = 'invisible', 0)
 }
 function dragEnd() {
-      this.className = 'item'
-      dragItem = null;
+    this.className = 'item'
+
+    
+
+    updateTask(this.parentElement.id, dragItem.textContent)
+    dragItem = null;
     //   console.log(this)
 }
 
@@ -93,10 +115,12 @@ function dragDrop() {
     if (dragItem===null){
         return;
     }
-    console.log(this)
-    updateTask(this.id, dragItem.textContent)
+   
+    
+    
     this.append(dragItem);
-    console.log(dragItem.textContent)
+    //updateTask(this.id, dragItem.textContent)
+
 }
 
 columns.forEach(column => {
@@ -113,6 +137,7 @@ function dragLeave() {
 
 function dragOver(e) {
     e.preventDefault()
+    
   }
 }
 
@@ -121,14 +146,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
     drags();
 })
 function renderKanban () {
+    console.log(kanbanData)
     kanbanData.forEach((kanban)=>{
         const column = document.querySelector(`.column#${kanban.column}`)
-        console.log(column)
+        
         
         const cardlist = kanban.cards.map((item)=>{
             return task(item)
         }).join("")
-        console.log(cardlist)
+        
         column.insertAdjacentHTML("beforeend",cardlist)
     })
 }
