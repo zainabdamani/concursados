@@ -117,7 +117,7 @@
     list-style-type: none;
     padding: 0;
     margin: 5px;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .alinhar-filtro {
@@ -137,8 +137,10 @@
     align-items: center;
     justify-content: center;
     margin: 0 20px;
-    
-    
+}
+
+.label-icon h3{
+  text-align: center;
 }
 
 .box-icon{
@@ -164,9 +166,9 @@
     height: 400px;
 }
 
+
 canvas {
     display: flex;
-    border: 3px solid #ccc;
     background-color: rgba(255, 255, 255, 0.9);
     width: 100% !important;
     height: 100% !important;
