@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
         borderWidth: 1
       }]
     };
+    
   
     var options = {
       animation: {
