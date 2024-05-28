@@ -5,16 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
         labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
         datasets: [{
             label: 'Desempenho',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
+            data: [12, 19, 20, 5, 10, 3],
+            backgroundColor: 'rgba(143, 0, 255, 0.2)',
+            borderColor: 'rgba(143, 0, 255, 1)',
             borderWidth: 1
         }]
     };
 
     var options = {
         animation: {
-            duration: 2000, // Tempo da animação em milissegundos
+            duration: 4000, // Tempo da animação em milissegundos
         },
         scales: {
             yAxes: [{
@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function() {
       labels: ['Matematica', 'Português', 'Conhecimentos Gerais', 'Informática', 'Lingua Estrangeira'],
       datasets: [{
         label: 'Desempenho',
-        data: [65, 59, 80, 81, 56],
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
+        data: [50, 100, 85, 30, 85],
+        backgroundColor: 'rgba(143, 0, 255, 0.2)',
+        borderColor: 'rgba(143, 0, 255, 1)',
         borderWidth: 1,
 
       }]
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     var options = {
       animation: {
-        duration: 2000, // Tempo da animação em milissegundos
+        duration: 4000, // Tempo da animação em milissegundos
       },
       scale: {
         angleLines: {
@@ -77,15 +77,15 @@ document.addEventListener("DOMContentLoaded", function() {
       datasets: [{
         label: 'Desempenho',
         data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
+        backgroundColor: 'rgba(143, 0, 255, 0.2)',
+        borderColor: 'rgba(143, 0, 255, 1)',
         borderWidth: 1
       }]
     };
   
     var options = {
       animation: {
-        duration: 2000, // Tempo da animação em milissegundos
+        duration: 4000, // Tempo da animação em milissegundos
       },
       scales: {
         yAxes: [{
