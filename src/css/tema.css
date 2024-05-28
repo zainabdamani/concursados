@@ -1,3 +1,26 @@
+:root {
+  --fundo: linear-gradient(to bottom, #8B00F9, #420077);
+  --elementos: rgba(95, 0, 169, 0.5);
+  --icone-texto: #fff;
+  --icone-texto2: rgba(255, 255, 255, 0.8);
+  --question-box: #fff;
+  --border: #fff;
+  --progress-bar: #4caf50;
+  --text: black;
+}
+
+.dark-mode {
+  --fundo: #1a1a1a;
+  --elementos: #252525;
+  --icone-texto: #fff;
+  --icone-texto2: rgba(255, 255, 255, 0.8);
+  --question-box: #252525;
+  --border: #8F00FF;
+  --progress-bar: #8F00FF;
+  --text: rgb(222, 222, 222);
+}
+
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -6,7 +29,7 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #8B00F9, #420077);
+  background: var(--fundo);
 }
 
 header {
@@ -21,7 +44,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: rgba(95, 0, 169, 0.5);
+  background-color: var(--elementos); 
   width: 75vw;
   list-style: none;
   align-items: center;
@@ -100,8 +123,8 @@ main {
 }
 
 .bloco {
-  background-color: white;
-  border: 2px solid white;
+  background-color: var(--question-box);
+  border: 1px solid var(--border);
   border-radius: 20px;
   padding: 5px;
   margin-bottom: 5px;
@@ -118,6 +141,7 @@ main {
   min-height: 20%;
   width: 15%;
   display: flex;
+  color: var(--text);
 }
 
 #bola{
@@ -134,7 +158,7 @@ p {
 }
 
 .frase {
-  color: #555;
+  color: var(--text);
   margin-left: 13px;
 }
 
@@ -170,6 +194,7 @@ p {
 
 .rotate-img {
   transition: transform 0.7s ease-in-out;
+  color: var(--text);
 }
 
 .hovered {
