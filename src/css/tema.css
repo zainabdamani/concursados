@@ -195,6 +195,7 @@ p {
 .rotate-img {
   transition: transform 0.7s ease-in-out;
   color: var(--text);
+  border-radius: 50%;
 }
 
 .hovered {
