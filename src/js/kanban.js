@@ -84,6 +84,8 @@ function updateTask(columnName, task) {
         
         kanbanData = updatedKanbanData
         LocalStorage.save("kanban", kanbanData)
+    } else {
+        saveTask(kanban.column, kanbanItem)
     }
 }
 
