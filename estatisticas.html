@@ -6,38 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concursados</title>
     <link rel="stylesheet" href="/src/css/estatisticas.css">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
-
 
 <body class="body">
     <header>
         <nav class="py-4">
             <ul class="navigation">
-                <li class="listicon">
-                    <a href="landing-page.html"><i class='bx bx-home'></i></a>
-                </li>
-                <li class="listicon">
-                    <a href="index.html"><i class='bx bx-joystick'></i></a>
-                </li>
-                <li class="listicon">
-                    <a href="estatisticas.html"><i class='bx bx-line-chart'></i></a>
-                </li>
-                <li class="listicon">
-                    <a href="tema.html"><i class='bx bx-info-circle'></i></a>
-                </li>
-                <li class="listicon">
-                    <a href="#"><i class='bx bx-shopping-bag'></i></a>
-                </li>
-                <a class="nav-actions">
-                    <button class="btn">
-                        <i id="dark-mode-btn" class='bx bx-sun'></i>
-                    </button>
+                <li class="listicon"><a href="landing-page.html"><i class='bx bx-home'></i></a></li>
+                <li class="listicon"><a href="index.html"><i class='bx bx-joystick'></i></a></li>
+                <li class="listicon"><a href="estatisticas.html"><i class='bx bx-line-chart'></i></a></li>
+                <li class="listicon"><a href="tema.html"><i class='bx bx-info-circle'></i></a></li>
+                <li class="listicon"><a href="#"><i class='bx bx-shopping-bag'></i></a></li>
+                <a class="nav-action listicon">
+                    <button class="btn"><i id="dark-mode-btn" class='bx bx-sun'></i></button>
                 </a>
             </ul>
         </nav>
@@ -74,7 +61,7 @@
                 </li>
                 <li>
                     <div class="data">
-                        <p>Data final: </p>
+                        <p>Data final:</p>
                         <input type="date">
                     </div>
                 </li>
@@ -84,8 +71,10 @@
 
     <main class="alinhar">
         <article class="responsivo">
-            <div class="background-titulo">
-                <h2>Matemática</h2>
+            <!--<div class="background-titulo">--->
+                <div id="product-container"></div>
+            </div>
+            <!--<h2>Matemática</h2>
             </div>
             <div class="background">
                 <div class="label-icon">
@@ -126,7 +115,7 @@
                 <div class="label-icon">
                     <i class='bx bx-check'></i>
                     <div>
-                        <p>Taxa de acerto: 47%</p>
+                        <p>Taxa de acerto:</p>
                         <p>47%</p>
                     </div>
                 </div>
@@ -220,26 +209,38 @@
                         <p>Tempo médio de resposta:</p>
                         <p>1m27s</p>
                     </div>
-                </div>
+                </div>--->
             </div>
         </article>
     </main>
 
     <footer class="grafico-alinhamento">
-        <div class="grafico">
-            <canvas id="line-chart"></canvas>
-        </div>
-        <div class="grafico">
-            <canvas id="bar-chart"></canvas>
-        </div>
-        <div class="grafico">
-            <canvas id="radar-chart"></canvas>
+        <div class="container mt-5">
+            <ul class="nav nav-tabs alinhar-filtro" id="graficoTabs">
+                <li class="nav-item label-icon">
+                    <a class="nav-link" data-toggle="tab" href="#grafico2">Gráfico 2</a>
+                </li>
+                <li class="nav-item label-icon">
+                    <a class="nav-link" data-toggle="tab" href="#grafico3">Gráfico 3</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="grafico2" class="grafico">
+                    <canvas id="bar-chart"></canvas>
+                </div>
+                <div id="grafico3" class="grafico">
+                    <canvas id="radar-chart"></canvas>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="src/js/estatisticas.js"></script>
-    <script src="./src/js/dark-mode.js"></script>
+    <script src="src/js/dark-mode.js"></script>
 </body>
 
 </html>
