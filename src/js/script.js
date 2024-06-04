@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   var timeLeft = 0;
+  var maxTime = 30;
   var progressBar = document.querySelector('.progress');
   var timeDisplay = document.getElementById('time');
 
@@ -13,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var percent = (timeLeft / maxTime) * 100;
     progressBar.style.width = percent + '%';
 
-    var progressRatio = percent / 100;
+
+    var progressRatio = percent / 100; 
 
     if (progressRatio <= 1) {
       var green = Math.floor(255 - progressRatio * 255);
@@ -37,5 +39,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
   updateTime();
   updateProgressBar();
-  
+  countUp();
 });
