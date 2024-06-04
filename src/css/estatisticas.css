@@ -94,6 +94,7 @@
 /* Estilos de Alinhamento */
 .alinhar {
   display: flex;
+  flex-direction: column;
   list-style-type: none;
   padding: 0;
   margin: 5px;
@@ -161,4 +162,9 @@ canvas {
   height: 100% !important;
   object-fit: contain;
   border-radius: 15px;
+}
+
+#product-container{
+  display: flex;
+  justify-content: center;
 }

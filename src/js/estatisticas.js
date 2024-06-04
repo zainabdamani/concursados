@@ -19,6 +19,7 @@ function createHtmlCard(materia) {
   titulodiv.classList.add("background-titulo");
   const titulo = document.createElement("h3");
   titulo.textContent = materia.Disciplina;
+  titulo.classList.add("background-titulo");
   card.appendChild(titulo);
 
   const conteudo = document.createElement("div");
