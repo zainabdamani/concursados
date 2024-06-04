@@ -1,46 +1,31 @@
 :root {
-    --fundo: linear-gradient(to bottom, #8B00F9, #420077);
-    --elementos: rgba(95, 0, 169, 0.5);
-    --icone-texto: #fff;
-    --icone-texto2: rgba(255, 255, 255, 0.8);
-    --question-box: #fff;
-    --border: #fff;
-    --progress-bar: #4caf50;
-    --text: black;
-  }
-  
-  .dark-mode {
-    --fundo: #1a1a1a;
-    --elementos: #252525;
-    --icone-texto: #fff;
-    --icone-texto2: rgba(255, 255, 255, 0.8);
-    --question-box: #252525;
-    --border: #8F00FF;
-    --progress-bar: #8F00FF;
-    --text: rgb(222, 222, 222);
-  }
+  --fundo: #8B00F9;
+  --elementos: rgba(95, 0, 169, 0.5);
+  --icone-texto: #fff;
+  --icone-texto2: rgba(255, 255, 255, 0.8);
+  --question-box: #fff;
+  --border: #fff;
+  --progress-bar: #4caf50;
+  --text: black;
+}
 
-  .listicon a {
-    color: var(--icone-texto);
-    font-size: 20px;
-    height: 100%;
-    padding: 15px 20px;
-    display: block;
-    transition: transform 0.3s ease-in-out;
-    text-decoration: none;
-  }
+.dark-mode {
+  --fundo: #1a1a1a;
+  --elementos: #252525;
+  --icone-texto: #fff;
+  --icone-texto2: rgba(255, 255, 255, 0.8);
+  --question-box: #252525;
+  --border: #8F00FF;
+  --progress-bar: #8F00FF;
+  --text: rgb(222, 222, 222);
+}
 
-  .listicon button {
-    background: none;
-    border: none;
-    color: var(--icone-texto);
-  }
-
+/* Estilos Gerais */
 .body {
-    display: block;
-    text-align: center;
-    background: var(--fundo);
-    font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  text-align: center;
+  background: var(--fundo);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navigation {
@@ -56,122 +41,132 @@
   backdrop-filter: blur(100px) saturate(100%);
 }
 
+.listicon a,
+.listicon button {
+  color: var(--icone-texto);
+  font-size: 20px;
+}
 
 .listicon a {
-    display: flex;
-    color: #fff;
-    font-size: 20px;
-    height: 100%;
-    padding: 15px 20px;
-    transform: rotate(0deg) scale(1);
-    transition: all 0.3s ease-in-out;
+  display: block;
+  height: 100%;
+  padding: 15px 20px;
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 .listicon a:hover {
-    transform: rotate(360deg) scale(1.3);
-  }
-
-.btn {
-    background: none;
-    cursor: pointer;
-    color: #fff;
-    border-style: none;
-    font-size: 20px;
-  }
-
-.titulo {
-    display: flex;
-    justify-content: center;
-    color: white;
-
+  transform: rotate(360deg) scale(1.3);
 }
 
-.background-titulo{
+.btn {
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+}
+
+/* Estilos do Cabeçalho */
+.titulo {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color:var(--question-box);
-    border-radius: 20px;
-    margin: 10px 5px 0 5px;
-    padding: 5px;
-    font-size: 14px;
-    color: var(--text);
-    align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Estilos de Fundo */
+.background-titulo,
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--question-box);
+  border-radius: 20px;
+  margin: 10px 5px 0 5px;
+  padding: 5px;
+  font-size: 14px;
+  color: var(--text);
+  align-items: center;
 }
 
 .background {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    background-color:var(--question-box);
-    border-radius: 20px;
-    margin: 10px 5px 0 5px;
-    padding: 5px;
-    font-size: 14px;
-    color: var(--text);
-    align-items: flex-start;
+  justify-content: left;
+  align-items: flex-start;
 }
 
+/* Estilos de Alinhamento */
 .alinhar {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 5px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 5px;
+  justify-content: center;
 }
 
 .alinhar-filtro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-left: 0;
-    flex-direction: row;
-    color: white;
-    flex-wrap: nowrap;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-left: 0;
+  flex-direction: row;
+  color: white;
+  flex-wrap: nowrap;
+  margin: 0;
 }
 
+/* Estilos de Label e Ícones */
 .label-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
 }
 
-.label-icon h3{
+.label-icon h3 {
   text-align: center;
 }
 
-.box-icon{
-    color: var(--text);
+.box-icon {
+  color: var(--text);
 }
 
+/* Estilos dos Seletor de Data */
 .data {
-    color: white;
-    display: flex;
-    align-items: center;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
+/* Estilos dos Gráficos */
 .grafico-alinhamento {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    margin-top: 40px;
-    justify-content: space-evenly;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 40px;
+  justify-content: space-evenly;
 }
 
 .grafico {
-    width: 400px;
-    height: 400px;
+  width: 400px;
+  height: 400px;
+  display: none;
 }
 
+.grafico.active {
+  display: block;
+}
 
 canvas {
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain;
-    border-radius: 15px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+#product-container {
+  display: flex;
+  justify-content: center;
 }
