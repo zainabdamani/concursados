@@ -41,7 +41,8 @@
   backdrop-filter: blur(100px) saturate(100%);
 }
 
-.listicon a, .listicon button {
+.listicon a,
+.listicon button {
   color: var(--icone-texto);
   font-size: 20px;
 }
@@ -73,7 +74,8 @@
 }
 
 /* Estilos de Fundo */
-.background-titulo, .background {
+.background-titulo,
+.background {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,7 +166,7 @@ canvas {
   border-radius: 15px;
 }
 
-#product-container{
+#product-container {
   display: flex;
   justify-content: center;
 }
