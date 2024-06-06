@@ -157,12 +157,19 @@ form {
 
 .answerbox {
   background-color: var(--question-box);
-  width: 100%;
+  width: 99.2%;
   border-radius: 5px;
   min-height: 50px;
   border: 1px solid var(--border);
   margin-bottom: 10px;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+ padding: 2px 5px;
+ margin-right: 12px;
+ cursor: pointer;
+ 
 }
 
 /*.answerbox:nth-child(2) {
@@ -242,4 +249,8 @@ form {
 .time-left {
   color: white;
   margin-top: 10px;
+}
+
+button{
+  cursor: pointer;
 }
