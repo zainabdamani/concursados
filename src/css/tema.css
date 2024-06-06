@@ -190,12 +190,15 @@ p {
 .imagem img {
   width: 20px;
   height: auto;
+  color: var(--text);
+
 }
 
 .rotate-img {
   transition: transform 0.7s ease-in-out;
   color: var(--text);
   border-radius: 50%;
+  color: var(--text);
 }
 
 .hovered {
